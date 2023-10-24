@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - ./..env
+      - ./.env
     volumes:
       - postgres_volume:/var/lib/postgresql/data/
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -25,7 +25,7 @@ services:
     ports:
       - "80:80"
     env_file:
-      - ./..env
+      - ./.env
     volumes:
       - pgadmin:/var/lib/pgadmin
     depends_on:
